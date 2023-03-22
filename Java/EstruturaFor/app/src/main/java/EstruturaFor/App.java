@@ -3,14 +3,35 @@
  */
 package EstruturaFor;
 
+import java.util.Scanner;
+
 public class App {
+
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        for (int i=0; i<=10; i++){
-        
+
+        //Estrutura FOR
+        for (int i = 0; i <= 10; i++) {
+            System.out.println("i: "+i);
+        }
+        //Estrutura WHILE
+        int totalAlunos = 10;
+        Scanner leitorScanner = new Scanner(System.in);
+
+        while (totalAlunos > 0) {
+            System.out.print("Informe o nome do aluno: ");
+            String nomeAluno = leitorScanner.nextLine();
+            System.out.print("Informe a idade do aluno: ");
+            int idadeAluno = leitorScanner.nextInt();
+
+            System.out.println("O nome do aluno é: " + nomeAluno + " e sua"
+                    + " idade é: " + idadeAluno);
+            System.out.println("Contagem: " + totalAlunos);
+            totalAlunos = totalAlunos -1;
+            
         }
     }
 }
