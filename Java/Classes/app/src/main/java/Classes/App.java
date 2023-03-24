@@ -12,7 +12,7 @@ public class App {
 
     public static void main(String[] args) {
         
-        Pessoa objetoPessoa = new Pessoa();
+        Pessoa objetoPessoa = new Pessoa(70.0f, 1.70f);
                 
         Scanner leitor = new Scanner(System.in);
         
