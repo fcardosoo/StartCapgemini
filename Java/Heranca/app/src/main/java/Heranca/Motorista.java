@@ -8,6 +8,10 @@ package Heranca;
  *
  * @author d311r
  */
-public class Motorista {
+public class Motorista extends Funcionario{
     
+    
+    public Motorista(){
+        
+    }
 }
