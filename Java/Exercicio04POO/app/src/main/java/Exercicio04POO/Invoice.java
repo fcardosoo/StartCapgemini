@@ -9,34 +9,28 @@ package Exercicio04POO;
  * @author d311r
  */
 public class Invoice {
-    
+
     private int codigoItem;
     private String descricaoItem;
     private int quantidadeComprada;
     private float precoUnit;
 
     public Invoice(int codigoItem, String descricaoItem, int quantidadeComprada, float precoUnit) {
-        this.codigoItem = codigoItem;
-        this.descricaoItem = descricaoItem;
-        
-        if (quantidadeComprada < 0){
-            this.quantidadeComprada = 0;
-        } else{
-            this.quantidadeComprada = quantidadeComprada;
-        }
-        
-        if(precoUnit < 0){
-            this.precoUnit = 0;
-        } else {
-            this.precoUnit = precoUnit;
-        }        
+        this.setCodigoItem(codigoItem);
+        this.setDescricaoItem(descricaoItem);
+        this.setPrecoUnit(precoUnit);
+        this.setQuantidadeComprada(quantidadeComprada);
     }
 
-    public int getCodigoItem(){
+    public double getInvoiceAmount() {
+        return quantidadeComprada * precoUnit;
+    }
+
+    public int getCodigoItem() {
         return codigoItem;
     }
-    
-    public void setCodigoItem(int codigoItem){
+
+    public void setCodigoItem(int codigoItem) {
         this.codigoItem = codigoItem;
     }
 
@@ -53,7 +47,11 @@ public class Invoice {
     }
 
     public void setQuantidadeComprada(int quantidadeComprada) {
-        this.quantidadeComprada = quantidadeComprada;
+        if (quantidadeComprada < 0) {
+            this.quantidadeComprada = 0;
+        } else {
+            this.quantidadeComprada = quantidadeComprada;
+        }
     }
 
     public float getPrecoUnit() {
@@ -61,8 +59,10 @@ public class Invoice {
     }
 
     public void setPrecoUnit(float precoUnit) {
-        this.precoUnit = precoUnit;
+        if (precoUnit < 0) {
+            this.precoUnit = 0;
+        } else {
+            this.precoUnit = precoUnit;
+        }
     }
-    
-    
 }
