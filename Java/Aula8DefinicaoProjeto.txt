@@ -1,0 +1,55 @@
+1 Definição do Projeto Desenvolvido no Curso de Lógica de Programação
+
+Todo App
+
+1.1 Descrição: Aplicação para o gerenciamento de projetos e as tarefas envolvidas nesses projetos.
+
+1.2 Objetivo: Resolver a questão de organização de tarefas de um ou mais projetos.
+
+
+2. Entidades:
+
+* Projeto;
+   - Nome;
+   - Descrição;
+   - Data de Criação;
+   - Data de Atualização;
+* Tarefa;
+   - Nome;
+   - Descrição;
+   - Status;
+   - TAGs;
+   - Observações;
+   - Prazo;
+   - Data de criação;
+   - Data de atualização;
+
+2.1 Requisitos:
+
+* A aplicação deve permitir criar o cadastro de projetos (CRUD);
+* A aplicação deve permitir alterar o cadastro de projetos (CRUD);
+* A aplicação deve permitir excluir o projeto (CRUD);
+
+* A aplicação deve permitir criar uma tarefa (CRUD);
+* A aplicação deve Permitir alterar uma tarefa (CRUD);
+* A aplicação deve permitir excluir uma tarefa (CRUD);
+
+
+3. Regras de Negócio:
+
+* A aplicação não irá conter um sistema de login;
+* Não haverá o conceito de usuário;
+* Toda tarefa deve pertencer a um projeto;
+// * Não podem haver tags repetidas numa mesma tarefa;
+// * Deve ser possível filtrar as tarefas por tag;
+
+
+4. Tecnologias utilizadas
+
+* Java;
+* MySQL;
+
+
+
+
+
