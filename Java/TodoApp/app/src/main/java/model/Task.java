@@ -10,17 +10,25 @@ import java.util.Date;
  *
  * @author d311r
  */
-public class Project {
+public class Task {
     private int id;
+    private int idProject;
     private String name;
     private String description;
+    private String notes;
+    private boolean isComplete;
+    private Date deadline;
     private Date createdAt;
     private Date updatedAt;
 
-    public Project(int id, String name, String description, Date createdAt, Date updatedAt) {
+    public Task(int id, int idProject, String name, String description, String notes, boolean isComplete, Date deadline, Date createdAt, Date updatedAt) {
         this.id = id;
+        this.idProject = idProject;
         this.name = name;
         this.description = description;
+        this.notes = notes;
+        this.isComplete = isComplete;
+        this.deadline = deadline;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
@@ -31,6 +39,14 @@ public class Project {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getIdProject() {
+        return idProject;
+    }
+
+    public void setIdProject(int idProject) {
+        this.idProject = idProject;
     }
 
     public String getName() {
@@ -47,6 +63,30 @@ public class Project {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public boolean isIsComplete() {
+        return isComplete;
+    }
+
+    public void setIsComplete(boolean isComplete) {
+        this.isComplete = isComplete;
+    }
+
+    public Date getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(Date deadline) {
+        this.deadline = deadline;
     }
 
     public Date getCreatedAt() {
@@ -67,7 +107,8 @@ public class Project {
 
     @Override
     public String toString() {
-        return "Project{" + "id=" + id + ", name=" + name + ", description=" + description + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + '}';
+        return "Task{" + "id=" + id + ", idProject=" + idProject + ", name=" + name + ", description=" + description + ", notes=" + notes + ", isComplete=" + isComplete + ", deadline=" + deadline + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + '}';
     }
-        
+    
+    
 }
