@@ -38,8 +38,10 @@ public class TaskController {
             statement.setDate(8, new Date(task.getUpdatedAt().getTime()));
             statement.execute();
             
-        } catch (Exception e) {
-            
+        } catch (Exception ex) {
+            throw new RuntimeException("Erro ao salvar a tarefa" + ex.getMessage(), ex);
+        } finally {
+            ConnectionFactory.closeConnection(connection);
         }
     }
     
