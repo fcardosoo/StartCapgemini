@@ -47,6 +47,31 @@ public class TaskController {
     
     public void update(Task task) {
         
+        String sql = "UPDATE tasks SET idProject = ?, name = ?, description = ?,"
+                + "notes = ?, completed = ?, deadline = ?,"
+                + "criatedAt = ?, updatedAt = ? WHERE id = ?";
+        
+        Connection connection = null;
+        PreparedStatement statement = null;
+        
+        try {
+            connection = ConnectionFactory.getConnection();
+            statement = connection.prepareStatement(sql);
+            statement.setInt(1, task.getIdProject());
+            statement.setString(1, task.getName());
+            statement.setString(1, task.getDescription());
+            statement.setString(1, task.getNotes());
+            statement.setBoolean(1, task.isIsComplete());
+            statement.setInt(1, task.getIdProject());
+            statement.setDate(1, new Date(task.getDeadline().getTime()));
+            statement.setDate(1, new Date(task.getCreatedAt().getTime()));
+            statement.setDate(1, new Date(task.getUpdatedAt().getTime()));
+            statement.execute();
+            
+        } catch (Exception ex) {
+            throw new RuntimeException("Erro ao deletar a tarefa " + ex.getMessage(), ex);
+        }
+        
     }
     
     public void removeById(int taskId) throws SQLException {
