@@ -34,7 +34,9 @@ public class TaskController {
             statement.setBoolean(4, task.isIsComplete());
             statement.setString(5, task.getNotes());
             statement.setDate(6, new Date(task.getCreatedAt().getTime()));
-            
+            statement.setDate(7, new Date(task.getCreatedAt().getTime()));
+            statement.setDate(8, new Date(task.getUpdatedAt().getTime()));
+            statement.execute();
             
         } catch (Exception e) {
             
