@@ -7,6 +7,7 @@ package controller;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import model.Project;
+import util.ConnectionFactory;
 
 /**
  *
@@ -24,6 +25,10 @@ public class ProjectController {
         
         try {
             // Cria uma conexão com o banco de dados
+            connection = ConnectionFactory.getConnection();
+            // Cria um PreparedStatement, classe usada para executar a query
+            statement = connection.prepareStatement(sql);
+            
             
         }
     }
