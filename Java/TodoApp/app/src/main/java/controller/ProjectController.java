@@ -65,8 +65,8 @@ public class ProjectController {
             
             statement.setString(1, project.getName());
             statement.setString(2, project.getDescription());
-            statement.setString(3, new Date(project.getCreatedAt().getTime()));
-            statement.setString(4, new Date(project.getUpdatedAt().getTime()));
+            statement.setDate(3, new Date(project.getCreatedAt().getTime()));
+            statement.setDate(4, new Date(project.getUpdatedAt().getTime()));
             statement.setInt(5, project.getId());
             
             //Executa a sql para inserção dos dados
