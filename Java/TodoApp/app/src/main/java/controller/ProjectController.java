@@ -6,6 +6,8 @@ package controller;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Date;
 import model.Project;
 import util.ConnectionFactory;
 
@@ -29,8 +31,19 @@ public class ProjectController {
             // Cria um PreparedStatement, classe usada para executar a query
             statement = connection.prepareStatement(sql);
             
+            statement.setString(1, project.getName());
+            statement.setString(2, project.getDescription());
+            statement.setDate(3, new Date(project.getCreatedAt().getTime()));
+            statement.setDate(4, new Date(project.getUpdatedAt().getTime()));
             
+            //Executa a sql para a inserção dos dados
+            statement.execute();
+        } catch (SQLException ex) {
+            throw new RuntimeException("Erro ao salvar o projeto");        
+        } finally{
+            ConnectionFactory.closeConnection(connection, statement);
         }
     }
+    
     
 }
