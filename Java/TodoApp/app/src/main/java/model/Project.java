@@ -25,6 +25,10 @@ public class Project {
         this.updatedAt = updatedAt;
     }
 
+    public Project() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
     public int getId() {
         return id;
     }
