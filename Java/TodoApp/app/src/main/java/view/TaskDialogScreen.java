@@ -195,7 +195,7 @@ public class TaskDialogScreen extends javax.swing.JDialog {
             
             
         } catch(Exception e) {
-            
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
         }
         
         this.dispose();
