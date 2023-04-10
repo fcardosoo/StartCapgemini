@@ -5,6 +5,7 @@
 package view;
 
 import controller.ProjectController;
+import javax.swing.JOptionPane;
 import model.Project;
 
 /**
@@ -151,6 +152,10 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
         project.setDescription(jTextAreaDescription.getText());
         
         controller.save(project);
+        
+        JOptionPane.showMessageDialog(rootPane, "Projeto salvo com sucesso.");
+        
+        this.dispose();
         
     }//GEN-LAST:event_jLabelToolBarSaveMouseClicked
 
