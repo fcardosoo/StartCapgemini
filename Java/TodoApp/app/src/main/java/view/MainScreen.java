@@ -18,6 +18,7 @@ public class MainScreen extends javax.swing.JFrame {
      */
     public MainScreen() {
         initComponents();
+        decorateTableTask();
     }
 
     /**
@@ -133,6 +134,11 @@ public class MainScreen extends javax.swing.JFrame {
         jLabelProjectAdd.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabelProjectAdd.setForeground(new java.awt.Color(0, 152, 153));
         jLabelProjectAdd.setText("+");
+        jLabelProjectAdd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelProjectAddMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelProjectLayout = new javax.swing.GroupLayout(jPanelProject);
         jPanelProject.setLayout(jPanelProjectLayout);
@@ -306,6 +312,13 @@ public class MainScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jLabelProjectAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelProjectAddMouseClicked
+        boolean rootPaneChekingEnable = false;
+        // TODO add your handling code here:
+        ProjectDialogScreen projectDialogScreen = new ProjectDialogScreen(this, rootPaneChekingEnable);
+        projectDialogScreen.setVisible(true);
+    }//GEN-LAST:event_jLabelProjectAddMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -366,13 +379,18 @@ public class MainScreen extends javax.swing.JFrame {
 
 public void decorateTableTasks(){
     
+    // Customizando o Header da table de tarefas
     jTableTasks.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 14));
     jTableTasks.getTableHeader().setBackground(new Color(0,153,102));
     jTableTasks.getTableHeader().setForeground(new Color(255,255,255));
     
-    
+    // Criando um sort automático para as colunas da table
     jTableTasks.setAutoCreateRowSorter(true);
     
 }
+
+    private void decorateTableTask() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
 }
