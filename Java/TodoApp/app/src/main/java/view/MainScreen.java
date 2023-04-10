@@ -314,7 +314,7 @@ public class MainScreen extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Java swing".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -360,4 +360,11 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPaneProjects;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
+public void decorateTableTasks(){
+    
+    
+    
+}
+
 }
