@@ -4,6 +4,9 @@
  */
 package view;
 
+import java.awt.Color;
+import java.awt.Font;
+
 /**
  *
  * @author d311r
@@ -44,8 +47,8 @@ public class MainScreen extends javax.swing.JFrame {
         jScrollPaneProjects = new javax.swing.JScrollPane();
         jListProjects = new javax.swing.JList<>();
         jPanel5 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jScrollPaneTasks = new javax.swing.JScrollPane();
+        jTableTasks = new javax.swing.JTable();
 
         jLabelEmptyListIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelEmptyListIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-lists-64.png"))); // NOI18N
@@ -217,8 +220,8 @@ public class MainScreen extends javax.swing.JFrame {
         jPanel5.setBackground(java.awt.Color.white);
         jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jTable1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTableTasks.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTableTasks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -244,11 +247,11 @@ public class MainScreen extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTable1.setGridColor(java.awt.Color.white);
-        jTable1.setRowHeight(40);
-        jTable1.setSelectionBackground(new java.awt.Color(204, 255, 204));
-        jTable1.setShowHorizontalLines(true);
-        jScrollPane1.setViewportView(jTable1);
+        jTableTasks.setGridColor(java.awt.Color.white);
+        jTableTasks.setRowHeight(40);
+        jTableTasks.setSelectionBackground(new java.awt.Color(204, 255, 204));
+        jTableTasks.setShowHorizontalLines(true);
+        jScrollPaneTasks.setViewportView(jTableTasks);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -256,14 +259,14 @@ public class MainScreen extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPaneTasks, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPaneTasks, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -356,15 +359,16 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelTasks;
     private javax.swing.JLabel jPanelTasksAdd;
     private javax.swing.JLabel jPanelTasksTitle;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPaneProjects;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jScrollPaneTasks;
+    private javax.swing.JTable jTableTasks;
     // End of variables declaration//GEN-END:variables
 
 public void decorateTableTasks(){
     
-    
-    
+    jTableTasks.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 14));
+    jTableTasks.getTableHeader().setBackground(new Color(0,153,102));
+    jTableTasks.getTableHeader().setForeground(new Color(255,255,255));
 }
 
 }
