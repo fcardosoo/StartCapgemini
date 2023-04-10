@@ -369,6 +369,10 @@ public void decorateTableTasks(){
     jTableTasks.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 14));
     jTableTasks.getTableHeader().setBackground(new Color(0,153,102));
     jTableTasks.getTableHeader().setForeground(new Color(255,255,255));
+    
+    
+    jTableTasks.setAutoCreateRowSorter(true);
+    
 }
 
 }
