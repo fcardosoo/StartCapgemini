@@ -170,6 +170,11 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelTasksAdd.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jPanelTasksAdd.setForeground(new java.awt.Color(0, 152, 153));
         jPanelTasksAdd.setText("+");
+        jPanelTasksAdd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelTasksAddMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelTasksLayout = new javax.swing.GroupLayout(jPanelTasks);
         jPanelTasks.setLayout(jPanelTasksLayout);
@@ -318,6 +323,16 @@ public class MainScreen extends javax.swing.JFrame {
         ProjectDialogScreen projectDialogScreen = new ProjectDialogScreen(this, rootPaneChekingEnable);
         projectDialogScreen.setVisible(true);
     }//GEN-LAST:event_jLabelProjectAddMouseClicked
+
+    private void jPanelTasksAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTasksAddMouseClicked
+        boolean rootPaneCheckingEnable = false;
+        // TODO add your handling code here:
+        
+        TaskDialogScreen taskDialogScreen = new TaskDialogScreen(this, rootPaneCheckingEnable);
+        taskDialogScreen.setProject(null);
+        taskDialogScreen.setVisible(true);
+        
+    }//GEN-LAST:event_jPanelTasksAddMouseClicked
 
     /**
      * @param args the command line arguments
