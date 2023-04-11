@@ -8,6 +8,7 @@ import controller.TaskController;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
+import model.Project;
 import model.Task;
 
 /**
@@ -17,6 +18,7 @@ import model.Task;
 public class TaskDialogScreen extends javax.swing.JDialog {
 
     TaskController controller;
+    Project project;
     
     public TaskDialogScreen(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
