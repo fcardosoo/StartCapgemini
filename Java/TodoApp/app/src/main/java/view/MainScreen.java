@@ -432,7 +432,7 @@ public void decorateTableTasks(){
         
         projectModel.clear();
         
-        for (int i = 0; i < projects.size() -1; i++) {            
+        for (int i = 0; i < projects.size(); i++) {            
             Project project = projects.get(i);            
             projectModel.addElement(project);
         }
