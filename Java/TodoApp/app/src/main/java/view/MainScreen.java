@@ -435,7 +435,14 @@ public void decorateTableTasks(){
         
         List<Project> projects = projectController.getAll();
         
+        projectModel.clear();
         
+        for (int i = 0; i < projects.size() -1; i++) {
+            
+            Project project = projects.get(i);
+            
+            projectModel.addElement(project);
+        }
         
     }
     
