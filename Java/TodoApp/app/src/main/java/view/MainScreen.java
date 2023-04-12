@@ -4,6 +4,8 @@
  */
 package view;
 
+import controller.ProjectController;
+import controller.TaskController;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -13,12 +15,16 @@ import java.awt.Font;
  */
 public class MainScreen extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MainScreen
-     */
+    ProjectController projectController;
+    TaskController taskController;
+    
+    DefaultListModel<Projects> ;
+    
     public MainScreen() {
         initComponents();
         decorateTableTask();
+        
+        initDataController();
     }
 
     /**
@@ -407,5 +413,11 @@ public void decorateTableTasks(){
     private void decorateTableTask() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
+    
+    public void initDataController(){
+        projectController = new ProjectController();
+        taskController = new TaskController();       
+        
+    }
+    
 }
