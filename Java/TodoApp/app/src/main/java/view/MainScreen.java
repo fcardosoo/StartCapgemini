@@ -437,6 +437,8 @@ public void decorateTableTasks(){
             projectModel.addElement(project);
         }
         
+    jListProjects.setModel(projectModel);
+        
     }
     
 }
