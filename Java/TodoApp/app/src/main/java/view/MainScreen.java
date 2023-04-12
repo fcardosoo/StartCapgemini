@@ -8,6 +8,7 @@ import controller.ProjectController;
 import controller.TaskController;
 import java.awt.Color;
 import java.awt.Font;
+import java.util.List;
 import javax.swing.DefaultListModel;
 import model.Project;
 
@@ -27,6 +28,7 @@ public class MainScreen extends javax.swing.JFrame {
         decorateTableTask();
         
         initDataController();
+        initComponentsModel();
     }
 
     /**
@@ -419,6 +421,21 @@ public void decorateTableTasks(){
     public void initDataController(){
         projectController = new ProjectController();
         taskController = new TaskController();       
+        
+    }
+    
+    public void initComponentsModel(){
+        
+        projectModel = new DefaultListModel<Project>();
+        loadProjects();
+        
+    }
+    
+    public void loadProjects(){
+        
+        List<Project> projects = projectController.getAll();
+        
+        
         
     }
     
