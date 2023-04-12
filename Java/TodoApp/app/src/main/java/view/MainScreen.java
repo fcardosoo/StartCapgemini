@@ -21,7 +21,7 @@ public class MainScreen extends javax.swing.JFrame {
     ProjectController projectController;
     TaskController taskController;
     
-    DefaultListModel<Project> projectModel;
+    DefaultListModel projectModel;
     
     public MainScreen() {
         initComponents();
