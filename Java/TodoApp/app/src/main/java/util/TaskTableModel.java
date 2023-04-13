@@ -30,7 +30,22 @@ public class TaskTableModel extends AbstractTableModel{
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        switch(columnIndex){
+            case 1:
+                return tasks.get(rowIndex).getName();
+            case 2:
+                
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            default:
+            
+        }
     }
     
 }
