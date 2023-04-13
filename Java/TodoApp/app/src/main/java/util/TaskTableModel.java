@@ -35,16 +35,17 @@ public class TaskTableModel extends AbstractTableModel{
             case 1:
                 return tasks.get(rowIndex).getName();
             case 2:
-                
-                break;
+                return tasks.get(rowIndex).getDescription();
             case 3:
-                break;
+                return tasks.get(rowIndex).getDeadline();
             case 4:
-                break;
+                return tasks.get(rowIndex).isIsComplete();
             case 5:
-                break;
+                return "";
+            case 6:
+                return "";
             default:
-            
+                return "";
         }
     }
     
