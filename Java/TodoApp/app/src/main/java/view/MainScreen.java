@@ -435,6 +435,8 @@ public void decorateTableTasks(){
         projectsModel = new DefaultListModel<Project>();
         loadProjects();
         
+        taskModel  = new TaskTableModel();
+        jTableTasks.setModel(taskModel);
     }
     
     public void loadProjects(){
