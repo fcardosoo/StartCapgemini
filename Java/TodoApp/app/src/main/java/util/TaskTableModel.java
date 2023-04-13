@@ -48,5 +48,17 @@ public class TaskTableModel extends AbstractTableModel{
                 return "Dados não encontrados!";
         }
     }
+
+    public String[] getColumns() {
+        return columns;
+    }
+
+    public List<Task> getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
+    }
     
 }
