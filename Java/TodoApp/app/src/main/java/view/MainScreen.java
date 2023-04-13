@@ -442,6 +442,7 @@ public void decorateTableTasks(){
     
     public void loadTasks(){
         List<Task> tasks = taskController.getAll(14);
+        
     }
     
     public void loadProjects(){
