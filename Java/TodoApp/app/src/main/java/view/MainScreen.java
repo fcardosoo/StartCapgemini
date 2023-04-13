@@ -13,6 +13,7 @@ import java.awt.event.WindowEvent;
 import java.util.List;
 import javax.swing.DefaultListModel;
 import model.Project;
+import model.Task;
 import util.TaskTableModel;
 
 /**
@@ -437,6 +438,10 @@ public void decorateTableTasks(){
         
         taskModel  = new TaskTableModel();
         jTableTasks.setModel(taskModel);
+    }
+    
+    public void loadTasks(){
+        List<Task> tasks = taskController.getAll(14);
     }
     
     public void loadProjects(){
