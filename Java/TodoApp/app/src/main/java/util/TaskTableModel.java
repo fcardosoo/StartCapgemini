@@ -20,7 +20,7 @@ public class TaskTableModel extends AbstractTableModel{
     
     @Override
     public int getRowCount() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return tasks.size();        
     }
 
     @Override
