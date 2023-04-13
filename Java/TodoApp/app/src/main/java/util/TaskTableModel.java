@@ -45,7 +45,7 @@ public class TaskTableModel extends AbstractTableModel{
             case 6:
                 return "";
             default:
-                return "";
+                return "Dados não encontrados!";
         }
     }
     
