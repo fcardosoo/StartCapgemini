@@ -438,10 +438,13 @@ public void decorateTableTasks(){
         
         taskModel  = new TaskTableModel();
         jTableTasks.setModel(taskModel);
+        loadTasks();
     }
     
     public void loadTasks(){
-        List<Task> tasks = taskController.getAll(14);
+        List<Task> tasks = taskController.getAll(1);
+        
+        taskModel.setTasks(tasks);
         
     }
     
