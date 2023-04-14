@@ -438,17 +438,17 @@ public void decorateTableTasks(){
         
         taskModel  = new TaskTableModel();
         jTableTasks.setModel(taskModel);
-        loadTasks();
+        loadTasks(14);
     }
     
-    public void loadTasks(){
+    public void loadTasks(int idProject){
         List<Task> tasks = taskController.getAll(1);
         
         taskModel.setTasks(tasks);
         
     }
     
-    public void loadProjects(){
+    public void loadProjects() {
         
         List<Project> projects = projectController.getAll();
         
