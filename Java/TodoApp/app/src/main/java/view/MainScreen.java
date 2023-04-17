@@ -358,8 +358,10 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanelTasksAddMouseClicked
 
     private void jTableTasksMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableTasksMouseClicked
-        int rowIndex = jTableTasks.rowAtPoint(evt.getLocationOnScreen().getLocation());
-        int columnIndex = jTableTasks.rowAtPoint(evt.getLocationOnScreen().getLocation());
+        int rowIndex = jTableTasks.rowAtPoint(evt.getPoint());
+        int columnIndex = jTableTasks.rowAtPoint(evt.getPoint());
+        
+        
     }//GEN-LAST:event_jTableTasksMouseClicked
 
     /**
