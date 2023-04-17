@@ -364,7 +364,7 @@ public class MainScreen extends javax.swing.JFrame {
         switch(columnIndex){
              case 3:
                 Task task = taskModel.getTasks().get(rowIndex);
-                taskController.save(task);
+                taskController.update(task);
             break;
             case 4:
                 
