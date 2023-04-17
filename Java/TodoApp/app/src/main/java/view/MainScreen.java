@@ -480,8 +480,20 @@ public void decorateTableTasks(){
     public void loadTasks(int idProject){
         List<Task> tasks = taskController.getAll(1);
         
-        taskModel.setTasks(tasks);
-        
+        taskModel.setTasks(tasks);        
+    }
+    
+    private void showJTableTasks(boolean hasTasks){
+        if (hasTasks){
+            if(jPanelEmptyList.isVisible()){
+               jPanelEmptyList.setVisible(false);
+               jPanel5.remove(jPanelEmptyList);
+            }
+            
+            jPanel5.add(jScrollPaneTasks);
+            jScrollPaneTasks.setVisible(true);
+            jScrollPaneTasks.setSize(jPanel5.getWidth(), jPanel5.getHeight());
+        } 
     }
     
     public void loadProjects() {
