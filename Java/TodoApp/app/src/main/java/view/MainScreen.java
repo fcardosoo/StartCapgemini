@@ -363,13 +363,14 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelProjectAddMouseClicked
 
     private void jPanelTasksAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTasksAddMouseClicked
-        boolean rootPaneCheckingEnable = false;
-        // TODO add your handling code here:
         
         TaskDialogScreen taskDialogScreen = new TaskDialogScreen(this, rootPaneCheckingEnable);
-        taskDialogScreen.setProject(null);
-        taskDialogScreen.setVisible(true);
         
+        int projectIndex = jListProjects.getSelectedIndex();
+        Project project = (Project) projectsModel.get(projectIndex);
+        taskDialogScreen.setProject(project);
+        
+        taskDialogScreen.setVisible(true);        
     }//GEN-LAST:event_jPanelTasksAddMouseClicked
 
     private void jTableTasksMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableTasksMouseClicked
@@ -473,8 +474,7 @@ public void decorateTableTasks(){
     
     public void initDataController(){
         projectController = new ProjectController();
-        taskController = new TaskController();       
-        
+        taskController = new TaskController();        
     }
     
     public void initComponentsModel(){
@@ -485,6 +485,13 @@ public void decorateTableTasks(){
         taskModel  = new TaskTableModel();
         jTableTasks.setModel(taskModel);
         loadTasks(14);
+        
+        if (!projectsModel.isEmpty()){
+            jListProjects.setSelectedIndex(0);
+            Project project = (Project) projectsModel.get(0);
+            loadTasks(project.getId());
+        }
+        
     }
     
     public void loadTasks(int idProject){
