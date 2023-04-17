@@ -493,7 +493,12 @@ public void decorateTableTasks(){
             jPanel5.add(jScrollPaneTasks);
             jScrollPaneTasks.setVisible(true);
             jScrollPaneTasks.setSize(jPanel5.getWidth(), jPanel5.getHeight());
-        } 
+        } else {
+            if (jScrollPaneTasks.isVisible()) {
+                jScrollPaneTasks.setVisible(false);
+                jPanel5.remove(jScrollPaneTasks);
+            }
+        }
     }
     
     public void loadProjects() {
