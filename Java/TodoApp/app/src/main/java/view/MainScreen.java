@@ -14,6 +14,7 @@ import java.util.List;
 import javax.swing.DefaultListModel;
 import model.Project;
 import model.Task;
+import util.DeadlineColumnCellRender;
 import util.TaskTableModel;
 
 /**
@@ -466,8 +467,11 @@ public void decorateTableTasks(){
     jTableTasks.getTableHeader().setBackground(new Color(0,153,102));
     jTableTasks.getTableHeader().setForeground(new Color(255,255,255));
     
+    jTableTasks.getColumnModel().getColumn(2)
+               .setCellRenderer(new DeadlineColumnCellRender());
+    
     // Criando um sort automático para as colunas da table
-    jTableTasks.setAutoCreateRowSorter(true);
+    // jTableTasks.setAutoCreateRowSorter(true);
     
 }
 
