@@ -472,7 +472,11 @@ public void decorateTableTasks(){
     jTableTasks.getColumnModel().getColumn(2)
                .setCellRenderer(new DeadlineColumnCellRender());
     
-    jTableTasks.getColumnModel().getColumn(4).setCellRenderer(new ButtonColumnCellRederer("edit"));
+    jTableTasks.getColumnModel().getColumn(4).setCellRenderer(
+                new ButtonColumnCellRederer("edit"));
+    
+    jTableTasks.getColumnModel().getColumn(5).setCellRenderer(
+                new ButtonColumnCellRederer("delete"));
     
     // Criando um sort automático para as colunas da table
     // jTableTasks.setAutoCreateRowSorter(true);
