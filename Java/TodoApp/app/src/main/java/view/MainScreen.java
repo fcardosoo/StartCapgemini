@@ -29,6 +29,7 @@ public class MainScreen extends javax.swing.JFrame {
     
     DefaultListModel projectsModel;
     TaskTableModel taskModel;
+    private boolean rootPaneCheckingEnable;
     
     public MainScreen() {
         initComponents();
