@@ -385,6 +385,9 @@ public class MainScreen extends javax.swing.JFrame {
             case 5:                
                 taskController.removeById(task.getId());
                 taskModel.getTasks().remove(task);
+                int projectIndex = jListProjects.getSelectedIndex();
+                Project project = (Project) projectsModel.get(projectIndex);
+                loadTasks (project.getId());
                 break;           
         }
     }//GEN-LAST:event_jTableTasksMouseClicked
