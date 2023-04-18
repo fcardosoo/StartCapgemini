@@ -20,6 +20,10 @@ import model.Task;
 public class ButtonColumnCellRederer extends DefaultTableCellRenderer {
     
     private String buttonType;
+    
+    public ButtonColumnCellRederer(String buttonType){
+        this.buttonType = buttonType;
+    }
 
     public String getButtonType() {
         return buttonType;
