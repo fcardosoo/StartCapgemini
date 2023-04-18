@@ -31,10 +31,11 @@ public class MainScreen extends javax.swing.JFrame {
     
     public MainScreen() {
         initComponents();
-        decorateTableTask();
         
         initDataController();
         initComponentsModel();
+        
+        decorateTableTask();
     }
 
     /**
