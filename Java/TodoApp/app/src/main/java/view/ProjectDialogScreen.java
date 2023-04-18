@@ -154,6 +154,7 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
                 project.setDescription(jTextAreaDescription.getText());
                 controller.save(project);
                 JOptionPane.showMessageDialog(rootPane, "Projeto salvo com sucesso.");
+                this.dispose();
             
             } else {
                 JOptionPane.showMessageDialog(rootPane, "O projeto não foi salvo,"
@@ -163,10 +164,7 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
             }
         } catch (Exception e){
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
-        }
-        
-        this.dispose();
-        
+        }        
     }//GEN-LAST:event_jLabelToolBarSaveMouseClicked
 
     /**
